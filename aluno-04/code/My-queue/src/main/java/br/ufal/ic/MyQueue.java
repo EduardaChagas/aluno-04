@@ -1,4 +1,4 @@
-package br.ufal.ic.queue;
+package br.ufal.ic;
 
 import java.util.Vector;
 
@@ -19,14 +19,16 @@ public class MyQueue<T> {
 	}
 
 	public boolean add(T t){
-		if((this.tail-this.head>=this.max_size-1)||((this.tail == this.head-1)&&this.head!=0)){
+		//if((this.tail-this.head>=this.max_size-1)||((this.tail == this.head-1)&&this.head!=0)){
+		if((this.tail-this.head>=this.max_size-1)){
 			return false;
-		}else{
-			if(head >= this.max_size){
+		}
+		else{
+			/*if(head >= this.max_size){
 				this.current_size = 0;
 				this.head = 0;
 				this.tail = -1;
-			}
+			}*/
 			this.items.add(this.current_size, t);
 			this.current_size = this.current_size + 1;
 			this.tail = this.tail + 1;

@@ -1,0 +1,1 @@
+mvn install:install-file -DgroupId=randoop -DartifactId=randoop -Dversion=3.1.5 -Dpackaging=jar -Dfile=C:\Users\Eduarda\Downloads\randoop-3.1.5\randoop-3.1.5\randoop-3.1.5.jar
